@@ -2,7 +2,7 @@ targetScope = 'subscription'
 
 // PARAMETERS
 param policySource string = 'pingele/azure-policy-as-code'
-param policyCategory string = 'Custom'
+param policyCategory string = 'Vermeer Governance'
 param assignmentEnforcementMode string = 'Default'
 param listOfAllowedLocations array = [
   'centralus'
