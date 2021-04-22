@@ -16,8 +16,11 @@
 ## Parameters
 
 **Defaults**
-```bicep
-param policySource string = 'globalbao/azure-policy-as-code'
+
+```s
+
+bicep
+param policySource string = 'pingele/azure-policy-as-code'
 param policyCategory string = 'Custom'
 param assignmentEnforcementMode string = 'Default'
 param listOfAllowedLocations array = [
@@ -37,20 +40,23 @@ param listOfAllowedSKUs array = [
   'Standard_D2s_v3'
   'Standard_D4s_v3'
 ]
+
 ```
 
 ## Deployment Steps
 
 ```s
+
 # optional step to view the JSON/ARM template
 az bicep build -f ./main.bicep
 
 # required steps
 az login
-az deployment sub create -f ./main.bicep -l australiaeast
+az deployment sub create -f ./main.bicep -l centralus
 
 # optional step to trigger a subscription-level policy compliance scan 
 az policy state trigger-scan --no-wait
+
 ```
 
 ### Azure Resource Manager (ARM) Template References
