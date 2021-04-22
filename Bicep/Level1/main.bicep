@@ -1,10 +1,11 @@
 targetScope = 'subscription'
 
 // PARAMETERS
-param policySource string = 'globalbao/azure-policy-as-code'
+param policySource string = 'pingele/azure-policy-as-code'
 param policyCategory string = 'Custom'
 param assignmentEnforcementMode string = 'Default'
 param listOfAllowedLocations array = [
+  'centralus'
   'eastus'
   'eastus2'
   'westus'
@@ -23,8 +24,8 @@ param listOfAllowedSKUs array = [
 ]
 
 // VARIABLES
-var initiative1Name = 'Initiative1'
-var assignment1Name = 'Initiative1'
+var initiative1Name = 'VM_Initiative'
+var assignment1Name = 'VM_Initiative'
 
 // OUTPUTS
 output initiative1ID string = initiative1.id
